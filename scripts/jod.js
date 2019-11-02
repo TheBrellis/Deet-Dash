@@ -30,6 +30,7 @@ function getJOD() {
     });
 
 };
+
 getJOD();
 
 

@@ -18,44 +18,35 @@
         <p id="current-time" class="display-4 text-light"></p>
     </header>
 
-    <div class="container">
-        <div class="card-columns">
-            <div class="card border-dark">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-
-
+ <div class="container">
+    <div class="card-columns">
+        <div class="card border-dark">
+            <div class="card-header">Word of the Day</div>
+            <div class="card-body">
+                <div class ="row">
+                    <div id="word" class = "h5"></div>
+                    <hr>
                 </div>
-            </div><!-- end of card 1 -->
+                <div>Definition: <span id="definition"></span></div>
+            </div>
+        </div><!-- end of card 1 -->
 
-            <div class="card border-dark">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-
-
-                </div>
-            </div> <!-- end of card 2 -->
-
-            <div class="card border-dark">
-                <div class="card-header">Today's Weather</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div id="city" class="h4 heading col-sm-8"></div>
-                        <div class="col-sm-4">
-                            <img id="weatherIcon" class="">
-                        </div>
+        <div class="card border-dark">
+            <div class="card-header">Today's Weather</div>
+            <div class="card-body">
+                <div class="row">
+                    <div id="city" class="h4 heading col-sm-8"></div>
+                    <div class="col-sm-4">
+                        <img id="weatherIcon" class="">
                     </div>
-                    <div id="temp" class="h5"></div>
-                    <div id="hiLo"></div>
-                    <div id="humidity"></div>
-                    <div id="wind"></div>
-
                 </div>
-            </div><!-- end of card 3 -->
+                <div id="temp" class="h5"></div>
+                <div id="hiLo"></div>
+                <div id="humidity"></div>
+                <div id="wind"></div>
 
-            <div class="card border-dark">
-                <div class="card-header">Header</div>
-                <div class="card-body">
+            </div>
+        </div><!-- end of card 2 -->
 
         <div class="card border-dark">
             <div id="card3Header" class="card-header"></div>
@@ -64,48 +55,24 @@
                 <hr id="jod_twopart" class="d-none">
                 <div id="delivery"></div>   
             </div>
-        </div><!-- end of card 4 -->
+        </div><!-- end of card 3 -->
 
-                </div>
-            </div><!-- end of card 4 -->
+    </div><!-- end of card-columns section -->
 
-            <div class="card border-dark">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-
-
-                </div>
-            </div><!-- end of card 5 -->
-
-            <div class="card border-dark">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-
-
-                </div>
-            </div><!-- end of card 6 -->
-
-
-
-        </div><!-- end of card-columns section -->
-
-    </div> <!-- end of container -->
+</div> <!-- end of container -->
 
     <!--BootStrap Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Moment.JS Script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <!--Page Specific Scripts-->
-    <script src="headerFill.js"></script>
-    <!--Page Specific Scripts-->   
-    <script src="jod_script.js"></script>
-    <script src="weather.js"></script>
+
+<!--Page Specific Scripts-->   
+    <script src="scripts/headerFill.js"></script>
+    <script src="scripts/wod.js"></script>  
+    <script src="scripts/jod.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>
