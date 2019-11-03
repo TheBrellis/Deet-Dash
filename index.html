@@ -12,15 +12,25 @@
 
 <body>
 
-    <header class="jumbotron jumbotron-fluid bg-dark">
+    <header class="jumbotron jumbotron-fluid bg-dark text-center">
         <h1 class="display-2 text-light">Welcome to Deet Dash!</h1>
         <p class="display-4 text-light ">Today is: <span id="current-day"></span></p>
         <p id="current-time" class="display-4 text-light"></p>
+        <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Modify Cards
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button data-card = "word" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Word of the Day</button>
+                    <button data-card = "weather" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Weather</button>
+                    <button data-card = "joke" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Joke of the Day</button>
+                </div>
+        </div>
     </header>
 
  <div class="container">
     <div class="card-columns">
-        <div class="card border-dark">
+        <div id = "wordCard" class="card border-dark">
             <div class="card-header">Word of the Day</div>
             <div class="card-body">
                 <div class ="row">
@@ -31,7 +41,7 @@
             </div>
         </div><!-- end of card 1 -->
 
-        <div class="card border-dark">
+        <div id = "weatherCard" class="card border-dark">
             <div class="card-header">Today's Weather</div>
             <div class="card-body">
                 <div class="row">
@@ -48,7 +58,7 @@
             </div>
         </div><!-- end of card 2 -->
 
-        <div class="card border-dark">
+        <div id = "jokeCard" class="card border-dark">
             <div id="card3Header" class="card-header"></div>
             <div class="card-body">
                 <div id="joke"></div>
@@ -73,6 +83,8 @@
     <script src="scripts/jokeOfDay.js"></script>
     <script src="scripts/wordOfDay.js"></script>  
     <script src="scripts/weather.js"></script>
+    <script src="scripts/toggleCards.js"></script>
+
 </body>
 
 </html>

@@ -13,7 +13,7 @@ function jokeOfDay() {
       // console.log(results)
       $("#card3Header").append("Joke of the Day!");
 
-        console.log(results.type)
+       // console.log(results.type)
           if(results.type === "single"){
            // console.log(results.joke)
             $("#joke").append(results.joke);
