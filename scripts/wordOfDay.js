@@ -19,7 +19,7 @@ $.ajax({
 }).done(response =>{
     wordEl.text(word);
     definitionEl.text(response[0].shortdef[0]);
-    console.log(response);
+  //  console.log(response);
 })
 }
 
