@@ -1,14 +1,25 @@
-// Pulling Modified Header Tags
+$(document).ready(function() {
 
+function fillHeader(){
+// Pulling Modified Header Tags
 var currentDayEl = $("#current-day");
 var currentTimeEl = $("#current-time");
 
 // Date
-const currentDay = moment().format('dddd MMMM Do');
+var currentDay = moment().format('dddd MMMM Do');
 currentDayEl.text(currentDay);
 
 // Time
+// Assigning an initial time value
+let currentTime = moment().format('h:mm:ss a');
+currentTimeEl.text(currentTime);
+// Updating the initial time value every second
 var timerInterval = setInterval(function () {
-    const currentTime = moment().format('h:mm:ss a');
+    currentTime = moment().format('h:mm:ss a');
     currentTimeEl.text(currentTime);
 }, 1000);
+};
+
+fillHeader();
+
+});
