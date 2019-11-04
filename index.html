@@ -30,6 +30,8 @@
 
  <div class="container">
     <div class="card-columns">
+
+        <!-- card 1 word of day -->
         <div id = "wordCard" class="card border-dark">
             <div class="card-header">Word of the Day</div>
             <div class="card-body">
@@ -39,8 +41,9 @@
                 </div>
                 <div>Definition: <span id="definition"></span></div>
             </div>
-        </div><!-- end of card 1 -->
+        </div><!-- end of card 1 word of day-->
 
+        <!-- card 2 weather -->
         <div id = "weatherCard" class="card border-dark">
             <div class="card-header">Today's Weather</div>
             <div class="card-body">
@@ -56,8 +59,9 @@
                 <div id="wind"></div>
 
             </div>
-        </div><!-- end of card 2 -->
+        </div><!-- end of card 2 weather -->
 
+        <!-- card 3 joke of day -->
         <div id = "jokeCard" class="card border-dark">
             <div id="card3Header" class="card-header"></div>
             <div class="card-body">
@@ -65,7 +69,21 @@
                 <hr id="jod_twopart" class="d-none">
                 <div id="delivery"></div>   
             </div>
-        </div><!-- end of card 3 -->
+        </div><!-- end of card 3 joke of day -->
+
+        <!-- card 4 inspirational qoute -->
+        <div id = "inspireCard" class="card border-dark">
+            <div class="card-header">Inspiration of the Day</div>
+            <div class="card-body">
+                <img id="quotePic" class="">
+                <div class="row d-flex justify-content-center">
+                    <button type="button" id= "copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
+                    <div id="hideURL" class="d-none"></div>
+                    <button type="button" id= "nextQ" class="btn btn-outline-success ml-2 mt-3">Next Qoute></button>                </div>
+            
+            </div>
+        </div> <!-- end of card 4 inspirational qoute -->
+
 
     </div><!-- end of card-columns section -->
 
@@ -83,6 +101,7 @@
     <script src="scripts/jokeOfDay.js"></script>
     <script src="scripts/wordOfDay.js"></script>  
     <script src="scripts/weather.js"></script>
+    <script src="scripts/inspire.js"></script>
     <script src="scripts/toggleCards.js"></script>
 
 </body>
