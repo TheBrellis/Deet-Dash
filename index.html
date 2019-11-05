@@ -17,92 +17,127 @@
         <p class="display-4 text-light ">Today is: <span id="current-day"></span></p>
         <p id="current-time" class="display-4 text-light"></p>
         <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Modify Cards
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button data-card = "word" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Word of the Day</button>
-                    <button data-card = "weather" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Weather</button>
-                    <button data-card = "joke" data-status = "on" data-action = "toggle-card" class="dropdown-item" type="button">Joke of the Day</button>
-                </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Modify Cards
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button data-card="word" data-status="on" data-action="toggle-card" class="dropdown-item"
+                    type="button">Word of the Day</button>
+                <button data-card="weather" data-status="on" data-action="toggle-card" class="dropdown-item"
+                    type="button">Weather</button>
+                <button data-card="joke" data-status="on" data-action="toggle-card" class="dropdown-item"
+                    type="button">Joke of the Day</button>
+            </div>
         </div>
     </header>
 
- <div class="container">
-    <div class="card-columns">
+    <div class="container">
+        <div class="card-columns">
 
-        <!-- card 1 word of day -->
-        <div id = "wordCard" class="card border-dark">
-            <div class="card-header">Word of the Day</div>
-            <div class="card-body">
-                <div class ="row">
-                    <div id="word" class = "h5"></div>
-                    <hr>
-                </div>
-                <div>Definition: <span id="definition"></span></div>
-            </div>
-        </div><!-- end of card 1 word of day-->
-
-        <!-- card 2 weather -->
-        <div id = "weatherCard" class="card border-dark">
-            <div class="card-header">Today's Weather</div>
-            <div class="card-body">
-                <div class="row">
-                    <div id="city" class="h4 heading col-sm-8"></div>
-                    <div class="col-sm-4">
-                        <img id="weatherIcon" class="">
+            <!-- card 1 word of day -->
+            <div id="wordCard" class="card border-dark">
+                <div class="card-header">Word of the Day</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div id="word" class="h5"></div>
+                        <hr>
                     </div>
+                    <div>Definition: <span id="definition"></span></div>
                 </div>
-                <div id="temp" class="h5"></div>
-                <div id="hiLo"></div>
-                <div id="humidity"></div>
-                <div id="wind"></div>
+            </div><!-- end of card 1 word of day-->
 
-            </div>
-        </div><!-- end of card 2 weather -->
+            <!-- card 2 weather -->
+            <div id="weatherCard" class="card border-dark">
+                <div class="card-header">Today's Weather</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div id="city" class="h4 heading col-sm-8"></div>
+                        <div class="col-sm-4">
+                            <img id="weatherIcon" class="">
+                        </div>
+                    </div>
+                    <div id="temp" class="h5"></div>
+                    <div id="hiLo"></div>
+                    <div id="humidity"></div>
+                    <div id="wind"></div>
 
-        <!-- card 3 joke of day -->
-        <div id = "jokeCard" class="card border-dark">
-            <div id="card3Header" class="card-header"></div>
-            <div class="card-body">
-                <div id="joke"></div>
-                <hr id="jod_twopart" class="d-none">
-                <div id="delivery"></div>   
-            </div>
-        </div><!-- end of card 3 joke of day -->
+                </div>
+            </div><!-- end of card 2 weather -->
 
-        <!-- card 4 inspirational qoute -->
-        <div id = "inspireCard" class="card border-dark">
-            <div class="card-header">Inspiration of the Day</div>
-            <div class="card-body">
-                <img id="quotePic" class="">
-                <div class="row d-flex justify-content-center">
-                    <button type="button" id= "copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
-                    <div id="hideURL" class="d-none"></div>
-                    <button type="button" id= "nextQ" class="btn btn-outline-success ml-2 mt-3">Next Qoute></button>                </div>
-            
-            </div>
-        </div> <!-- end of card 4 inspirational qoute -->
+            <!-- card 3 joke of day -->
+            <div id="jokeCard" class="card border-dark">
+                <div id="card3Header" class="card-header"></div>
+                <div class="card-body">
+                    <div id="joke"></div>
+                    <hr id="jod_twopart" class="d-none">
+                    <div id="delivery"></div>
+                </div>
+            </div><!-- end of card 3 joke of day -->
+
+            <!-- card 4 inspirational qoute -->
+            <div id="inspireCard" class="card border-dark">
+                <div class="card-header">Inspiration of the Day</div>
+                <div class="card-body">
+                    <img id="quotePic" class="">
+                    <div class="row d-flex justify-content-center">
+                        <button type="button" id="copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
+                        <div id="hideURL" class="d-none"></div>
+                        <button type="button" id="nextQ" class="btn btn-outline-success ml-2 mt-3">Next Qoute></button>
+                    </div>
+
+                </div>
+            </div> <!-- end of card 4 inspirational qoute -->
+
+            <!-- card 5 headlines -->
+            <div id="headlineCard" class="card border-dark">
+                <div class="card-header">Top 5 Headlines</div>
+                <div class="card-body">
+                        
+                        
+                        <div><a id="story1" href="" target="_blank"></a></div>
+                        <hr>
+                        <div><a id="story2" href="" target="_blank"></a></div>
+                        <hr>
+                        <div><a id="story3" href="" target="_blank"></a></div>
+                        <hr>
+                        <div><a id="story4" href="" target="_blank"></a></div>
+                        <hr>
+                        <div><a id="story5" href="" target="_blank"></a></div>
+                        <hr>
+                        <a class="d-flex justify-content-center" href="https://developer.nytimes.com" target= "_blank">
+                            <img src="https://developer.nytimes.com/files/poweredby_nytimes_200a.png?v=1539041465000" alt="New York Times Logo">
+                        </a> 
+
+                    
+                </div>
 
 
-    </div><!-- end of card-columns section -->
 
-</div> <!-- end of container -->
 
-    <!--BootStrap Scripts-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!--Moment.JS Script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            </div><!-- end of card-columns section -->
 
-<!--Page Specific Scripts-->   
-    <script src="scripts/headerFill.js"></script>
-    <script src="scripts/jokeOfDay.js"></script>
-    <script src="scripts/wordOfDay.js"></script>  
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/inspire.js"></script>
-    <script src="scripts/toggleCards.js"></script>
+        </div> <!-- end of container -->
+
+        <!--BootStrap Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <!--Moment.JS Script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+        <!--Page Specific Scripts-->
+        <script src="scripts/headerFill.js"></script>
+        <script src="scripts/jokeOfDay.js"></script>
+        <script src="scripts/wordOfDay.js"></script>
+        <script src="scripts/weather.js"></script>
+        <script src="scripts/inspire.js"></script>
+        <script src="scripts/toggleCards.js"></script>
+        <script src="scripts/headlines.js"></script>
 
 </body>
 
