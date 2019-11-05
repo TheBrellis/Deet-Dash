@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
+    var city = "Boston"
     function dailyWeather(){
-        let city = "Boston"
+        
         var currentURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=e4c0273e5ea54d9af35c603a4dae870e`
       // for daily weather
         $.ajax({
@@ -17,9 +17,19 @@ $(document).ready(function() {
             $("#wind").text("Wind Speed: " + response.wind.speed + "MPH");
             $("#hiLo").text("Hi: " + response.main.temp_max + " / Lo: " + response.main.temp_min)
     
-        //console.log(response);
+        // console.log(response);
+        // console.log(currentURL);
         });
         
     }
     dailyWeather();
+
+    // drop down box for new city
+    $("#citySearch").on("click", () => {
+        city = $("#newCity").val();
+        dailyWeather();
+        $("#newCity").val("")
+
+        // console.log(city)
+    })
 })
