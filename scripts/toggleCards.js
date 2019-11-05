@@ -26,6 +26,18 @@ if ($(this).data("status") === "on"){
         $('#jokeCard').addClass('d-none');
     }
 
+    if ($(this).data("card") === "inspire"){
+        $('#inspireCard').addClass('d-none');
+    }
+
+    if ($(this).data("card") === "headline"){
+        $('#headlineCard').addClass('d-none');
+    }
+
+    if ($(this).data("card") === "recipe"){
+        $('#recipeCard').addClass('d-none');
+    }
+
 
 } else {
 // Turning card on
@@ -43,6 +55,19 @@ if ($(this).data("status") === "on"){
     if ($(this).data("card") === "joke"){
         $('#jokeCard').removeClass('d-none');
     }
+
+    if ($(this).data("card") === "inspire"){
+        $('#inspireCard').removeClass('d-none');
+    }
+
+    if ($(this).data("card") === "headline"){
+        $('#headlineCard').removeClass('d-none');
+    }
+
+    if ($(this).data("card") === "recipe"){
+        $('#recipeCard').removeClass('d-none');
+    }
+
 
 }  
 
