@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" src="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Deet-Dash</title>
 </head>
 
@@ -45,7 +45,7 @@
 
             <!-- card 1 word of day -->
             <div id="wordCard" class="card border-dark">
-                <div class="card-header">Word of the Day</div>
+                <div class="card-header cardTop">Word of the Day</div>
                 <div class="card-body">
                     <div class="row">
                         <div id="word" class="h5"></div>
@@ -57,9 +57,9 @@
 
             <!-- card 2 weather -->
             <div id="weatherCard" class="card border-dark">
-                <div class="card-header">Today's Weather</div>
+                <div class="card-header cardTop">Today's Weather</div>
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row bg-light pt-3 mb-2">
                         <div id="city" class="h4 heading col-sm-8"></div>
                         <div class="col-sm-4">
                             <img id="weatherIcon" class="">
@@ -72,7 +72,7 @@
                     <hr>
                     <!-- drop down box to enter new city weather -->
                     <div class="dropdown">
-                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Enter New City
                         </button>
@@ -93,7 +93,7 @@
 
             <!-- card 3 joke of day -->
             <div id="jokeCard" class="card border-dark">
-                <div id="card3Header" class="card-header"></div>
+                <div id="card3Header" class="card-header cardTop"></div>
                 <div class="card-body">
                     <div id="joke"></div>
                     <hr id="jod_twopart" class="d-none">
@@ -103,13 +103,15 @@
 
             <!-- card 4 inspirational qoute -->
             <div id="inspireCard" class="card border-dark">
-                <div class="card-header">Inspiration of the Day</div>
+                <div class="card-header cardTop">Inspiration of the Day</div>
                 <div class="card-body">
-                    <img id="quotePic" class="">
+                    <div class="container d-flex justify-content-center">
+                        <img id="quotePic" class="image-fluid">
+                    </div>
                     <div class="row d-flex justify-content-center">
                         <button type="button" id="copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
                         <div id="hideURL" class="d-none"></div>
-                        <button type="button" id="nextQ" class="btn btn-outline-success ml-2 mt-3">Next Qoute></button>
+                        <button type="button" id="nextQ" class="btn btn-outline-success ml-2 mt-3">Next Quote></button>
                     </div>
 
                 </div>
@@ -117,7 +119,7 @@
 
             <!-- card 5 headlines -->
             <div id="headlineCard" class="card border-dark">
-                <div class="card-header">Top 5 Headlines</div>
+                <div class="card-header cardTop">Top 5 Headlines</div>
                 <div class="card-body">
 
 
@@ -140,7 +142,7 @@
 
             <!-- card 6 recipe of the day -->
             <div id="recipeCard" class="card border-dark">
-                <div class="card-header">Recipe of the Day</div>
+                <div class="card-header cardTop">Recipe of the Day</div>
                 <div class="card-body">
                     <div id="recipeTitle" class="h4 heading pb-2"></div>
                     <a id="recipeLink" class="d-flex justify-content-center" href="" target="_blank">
