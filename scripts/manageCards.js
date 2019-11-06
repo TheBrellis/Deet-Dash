@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
+// setting initial value of cards depending on whats currently in localStorage
+manageCards()
+
 // identify elements in drop down
 let cards = document.querySelectorAll("button[data-action= 'toggle-card']");
-console.log(userInfo,"before");
 
+//Updates display state of cards depending on values in userInfo object
 function manageCards(){
     console.log("hello");
     for (i=0; i<cardOptions.length;i++){
@@ -17,8 +20,6 @@ function manageCards(){
     }
 }
 
-
-
 function setUserInfo() {
     
     for (i=0; i<cardOptions.length;i++){
@@ -26,17 +27,11 @@ function setUserInfo() {
     userInfo.cards[i].status = currentState;
     //updating cards to match object states
     }
+    // updating display state depending on current value in the object
     manageCards();
-    // updating the correct card depending on the current value in the object
-   
-
-    /*
-    if ($(this).data("card") === "word"){
-        $('#wordCard').addClass('d-none');
-    }
-    */
    // updating localStorage
-
+let userInfoJSON = JSON.stringify(userInfo);
+localStorage.setItem('userInfo',userInfoJSON);
 }
 
 //Click Events for Card elements in Modal
