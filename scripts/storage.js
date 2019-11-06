@@ -1,25 +1,21 @@
+// Available Cards
+cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard"]
 // Checking Local Storage for userInfo
-cards = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard"]
 let userInfoJSON = localStorage.getItem('userInfo');
-userInfo = {
 
+userInfo = {
+    user: "me",
+    cards: []
 };
 
-
-
-
-
-
-
-
 if (userInfoJSON){
-    userInfo = JSON.parse(allInfoJSON);
+    userInfo = JSON.parse(userInfoJSON);
 } else {
-    for (i=9 ; i < 18; i++){
+   cardOptions.forEach(card =>{
         let thisInfo = {
-            card: `${i}`,
+            name: `${card}`,
             status: 'on'
         };
-        allInfo.push(thisInfo);
-    };
+        userInfo.cards.push(thisInfo);
+    });
 };
