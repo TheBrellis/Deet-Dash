@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    function numbers() {
+    function history() {
 
         var thisDate = moment().format('MM/DD')
         var queryURL = `http://numbersapi.com/${thisDate}/date`
@@ -10,7 +10,7 @@ $(document).ready(function() {
           method: "GET"
         })
           .then(function(response) {
-            $("#numbers").append(response);
+            $("#history").append(response);
       
 
             // $("#triviaQuestion").append(question)
@@ -21,16 +21,12 @@ $(document).ready(function() {
     
     };
     
-    numbers();
+    history();
 
-    // $("#nextTrivia").on("click", () => {
-    //     $("#triviaAnswer").addClass("d-none") 
-    //     $("#triviaQuestion").empty();
-    //     $("#triviaAnswer"). empty(); 
-    //     triviaQ();
-    // })
+    $("#nextHistory").on("click", () => {
+        $("#history").empty();
 
-    // $("#showTriviaAnswer").on("click", () => {
-    //     $("#triviaAnswer").removeClass("d-none")
-    //  })
+        history();
+    })
+
 });
