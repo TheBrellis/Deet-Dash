@@ -13,28 +13,45 @@
 <body>
 
     <header class="jumbotron jumbotron-fluid bg-dark text-center">
-        <h1 class="display-2 text-light">Welcome to Deet Dash!</h1>
+        <h1 class="display-3 text-light">Welcome to Deet Dash!</h1>
         <p class="display-4 text-light ">Today is: <span id="current-day"></span></p>
         <p id="current-time" class="display-4 text-light"></p>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Manage Your Page
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button data-card="word" data-status= "on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Word of the Day</button>
-                <button data-card="weather" data-status="on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Weather</button>
-                <button data-card="joke" data-status="on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Joke of the Day</button>
-                <button data-card="inspire" data-status="on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Inspiration of the Day</button>
-                <button data-card="headline" data-status="on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Top 5 Headlines</button>
-                <button data-card="recipe" data-status="on" data-action="toggle-card" class="dropdown-item"
-                    type="button">Recipe of the Day</button>
-                
+        <!--Mange Your Page Button-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Manage Your Page
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Select Your Deets</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-align-left">
+                        <div class="btn-group-vertical">
+                            <button data-card="word" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Word of the Day</button>
+                            <button data-card="weather" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Weather</button>
+                            <button data-card="joke" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Joke of the Day</button>
+                            <button data-card="inspire" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Inspiration of the Day</button>
+                            <button data-card="headline" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Top 5 Headlines</button>
+                            <button data-card="recipe" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Recipe of the Day</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id = "submit-cards" type="button" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -73,14 +90,15 @@
                     <div class="dropdown">
                         <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Enter New City
+                            Enter New City
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <div class="input-group">
                                 <input type="text" id="newCity" class="form-control" placeholder=""
                                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button id="citySearch" class="btn btn-outline-secondary" type="button">Search</button>
+                                    <button id="citySearch" class="btn btn-outline-secondary"
+                                        type="button">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -176,9 +194,9 @@
     <script src="scripts/wordOfDay.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/inspire.js"></script>
-    <script src="scripts/toggleCards.js"></script>
     <script src="scripts/headlines.js"></script>
     <script src="scripts/recipe.js"></script>
+    <script src="scripts/manageCards.js"></script>
 
 </body>
 
