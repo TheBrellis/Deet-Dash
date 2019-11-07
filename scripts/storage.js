@@ -1,6 +1,8 @@
+
 // Available Cards
 cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard"]
 // Checking Local Storage for userInfo
+function checkStorage(){
 let userInfoJSON = localStorage.getItem('userInfo');
 
 userInfo = {
@@ -19,3 +21,8 @@ if (userInfoJSON){
         userInfo.cards.push(thisInfo);
     });
 };
+};
+
+$(document).ready(function() {
+checkStorage();
+});
