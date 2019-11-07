@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Deet-Dash</title>
 </head>
 
@@ -16,7 +17,7 @@
         <h1 class="display-3 text-light">Welcome to Deet Dash!</h1>
         <p class="display-4 text-light ">Today is: <span id="current-day"></span></p>
         <p id="current-time" class="display-4 text-light"></p>
-        <!--Mange Your Page Button-->
+        <!--Manage Your Page Button-->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Manage Your Page
         </button>
@@ -45,6 +46,10 @@
                                 Top 5 Headlines</button>
                             <button data-card="recipe" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
                                 Recipe of the Day</button>
+                            <button data-card="trivia" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                Trivia of the Day</button>
+                            <button data-card="history" data-status="on" data-action="toggle-card" type="button" class="btn btn-primary text-align-left">
+                                This Day in History</button>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -61,7 +66,7 @@
 
             <!-- card 1 word of day -->
             <div id="wordCard" class="card border-dark">
-                <div class="card-header">Word of the Day</div>
+                <div class="card-header cardTop">Word of the Day</div>
                 <div class="card-body">
                     <div class="row">
                         <div id="word" class="h5"></div>
@@ -73,9 +78,9 @@
 
             <!-- card 2 weather -->
             <div id="weatherCard" class="card border-dark">
-                <div class="card-header">Today's Weather</div>
+                <div class="card-header cardTop">Today's Weather</div>
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row bg-light pt-3 mb-2">
                         <div id="city" class="h4 heading col-sm-8"></div>
                         <div class="col-sm-4">
                             <img id="weatherIcon" class="">
@@ -88,7 +93,7 @@
                     <hr>
                     <!-- drop down box to enter new city weather -->
                     <div class="dropdown">
-                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Enter New City
                         </button>
@@ -109,23 +114,27 @@
 
             <!-- card 3 joke of day -->
             <div id="jokeCard" class="card border-dark">
-                <div id="card3Header" class="card-header"></div>
+                <div id="card3Header" class="card-header cardTop"></div>
                 <div class="card-body">
                     <div id="joke"></div>
                     <hr id="jod_twopart" class="d-none">
                     <div id="delivery"></div>
+                    <button type="button" id="nextJoke" class="btn btn-outline-success ml-2 mt-3">Next
+                        Joke></button>
                 </div>
             </div><!-- end of card 3 joke of day -->
 
             <!-- card 4 inspirational qoute -->
             <div id="inspireCard" class="card border-dark">
-                <div class="card-header">Inspiration of the Day</div>
+                <div class="card-header cardTop">Inspiration of the Day</div>
                 <div class="card-body">
-                    <img id="quotePic" class="">
+                    <div class="container d-flex justify-content-center">
+                        <img id="quotePic" class="image-fluid">
+                    </div>
                     <div class="row d-flex justify-content-center">
                         <button type="button" id="copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
                         <div id="hideURL" class="d-none"></div>
-                        <button type="button" id="nextQ" class="btn btn-outline-success ml-2 mt-3">Next Qoute></button>
+                        <button type="button" id="nextQ" class="btn btn-outline-success ml-2 mt-3">Next Quote></button>
                     </div>
 
                 </div>
@@ -133,7 +142,7 @@
 
             <!-- card 5 headlines -->
             <div id="headlineCard" class="card border-dark">
-                <div class="card-header">Top 5 Headlines</div>
+                <div class="card-header cardTop">Top 5 Headlines</div>
                 <div class="card-body">
 
 
@@ -152,11 +161,11 @@
                             alt="New York Times Logo">
                     </a>
                 </div>
-            </div>
+            </div> <!-- end of card 5 headlines -->
 
             <!-- card 6 recipe of the day -->
             <div id="recipeCard" class="card border-dark">
-                <div class="card-header">Recipe of the Day</div>
+                <div class="card-header cardTop">Recipe of the Day</div>
                 <div class="card-body">
                     <div id="recipeTitle" class="h4 heading pb-2"></div>
                     <a id="recipeLink" class="d-flex justify-content-center" href="" target="_blank">
@@ -170,10 +179,47 @@
                 </div>
             </div> <!-- end of card 6 recipe of the day -->
 
+            <!-- card 7 Trivia Question of the day -->
+            <div id="triviaCard" class="card border-dark">
+                <div class="card-header cardTop">Triva Question of the Day</div>
+                <div class="card-body">
+                    <div id="triviaQuestion" class="h5 heading pb-2"></div>
+                    <hr>
+                    <div id="triviaChoices" class="h5 heading pb-2"></div>
+                    <hr id="hrAnswer" class="d-none">
+                    <div id="triviaAnswer" class="h5 heading pb-2 d-none"></div>
+                    <div class="row d-flex justify-content-center">
+                        <button type="button" id="showTriviaAnswer" class="btn btn-outline-success ml-2 mt-3">
+                            Show Answer></button>
+                        <button type="button" id="nextTrivia" class="btn btn-outline-success ml-2 mt-3">Next
+                            Question></button>
+                    </div>
 
+                </div>
+            </div> <!-- end of card 7 Trivia Question of the day -->
 
+            <!-- card 8 your date in history -->
+            <div id="historyCard" class="card border-dark">
+                <div class="card-header cardTop">This Day in History</div>
+                <div class="card-body">
+                    <div id="history" class="h5 heading pb-2"></div>
+                    <button type="button" id="nextHistory" class="btn btn-outline-success ml-2 mt-3">Next
+                        History></button>
+                </div>
+            </div> <!-- end of card 8 date in history  -->
 
-        </div><!-- end of card-columns section -->
+            <!-- card 9 your daily horoscope 
+                <div id="horoscopeCard" class="card border-dark">
+                <div class="card-header cardTop">Daily Horoscope!</div>
+                <div class="card-body">
+                    <div id="horoscope" class="h5 heading pb-2">sdsds</div>
+                    <hr>
+                    <div id="triviaChoices" class="h5 heading pb-2">sdsds</div>
+                </div>
+            </div>
+        </div>  end of card 9 recipe of the day -->
+
+    </div><!-- end of card-columns section -->
 
     </div> <!-- end of container -->
 
@@ -198,6 +244,9 @@
     <script src="scripts/inspire.js"></script>
     <script src="scripts/headlines.js"></script>
     <script src="scripts/recipe.js"></script>
+    <script src="scripts/trivia.js"></script>
+    <script src="scripts/history.js"></script>
+    <!-- <script src="scripts/horoscope.js"></script> -->
 </body>
 
 </html>

@@ -33,4 +33,11 @@ function jokeOfDay() {
 
 jokeOfDay();
 
+$("#nextJoke").on("click", () => {
+  $("#card3Header").empty();  
+  $("#joke").empty();
+  $("#delivery").empty(); 
+  jokeOfDay();
+})
+
 });

@@ -1,0 +1,11 @@
+body {
+	background-image: url("../Project-1/picture/gravel/gravel.png ");
+        /* background-repeat: no-repeat; */
+       /* background-size:cover;*/
+} 
+
+.cardTop {
+        background-color: rgb(167, 218, 188);
+        font-weight: bold;
+        text-align: center;
+}

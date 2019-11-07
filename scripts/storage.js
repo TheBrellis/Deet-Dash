@@ -1,6 +1,6 @@
 
 // Available Cards
-cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard"]
+cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard","triviaCard","historyCard"]
 // Checking Local Storage for userInfo
 function checkStorage(){
 let userInfoJSON = localStorage.getItem('userInfo');
