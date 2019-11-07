@@ -158,7 +158,7 @@
 
             <!-- card 7 Trivia Question of the day -->
             <div id="triviaCard" class="card border-dark">
-                <div class="card-header">Triva Question of the Day</div>
+                <div class="card-header cardTop">Triva Question of the Day</div>
                 <div class="card-body">
                     <div id="triviaQuestion" class="h5 heading pb-2"></div>
                     <hr>
@@ -177,7 +177,7 @@
 
             <!-- card 9 your daily horoscope -->
             <div id="numbersCard" class="card border-dark">
-                <div class="card-header">This date in history?</div>
+                <div class="card-header cardTop">This date in history?</div>
                 <div class="card-body">
                     <div id="numbers" class="h5 heading pb-2"></div>
                 </div>
@@ -194,11 +194,37 @@
             </div>
         </div>  end of card 8 recipe of the day -->
 
+            <!-- card 10 traffic -->
+            <div id="trafficCard" class="card border-dark">
+                <div class="card-header cardTop">Traffic</div>
+                <div class="card-body">
+                    <div>
+                        <div id="map" class="d-none mb-2"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Enter New City
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="input-group">
+                                    <input type="text" id="city-input" class="form-control controls"
+                                        placeholder="Start typing here" aria-label="Recipient's username"
+                                        aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button id="cityMapSearch" class="btn btn-outline-secondary cityAuto"
+                                            type="button">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- end of card 10 traffic-->
 
 
 
-
-    </div><!-- end of card-columns section -->
+        </div><!-- end of card-columns section -->
 
     </div> <!-- end of container -->
 
@@ -213,6 +239,11 @@
     <!--Moment.JS Script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+    <!-- Google Maps API -->
+    
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkOUsz16vR6zZzY2EaittC6wto8EGDn_Y&libraries=places"></script>
+
     <!--Page Specific Scripts-->
     <script src="scripts/headerFill.js"></script>
     <script src="scripts/jokeOfDay.js"></script>
@@ -224,6 +255,7 @@
     <script src="scripts/recipe.js"></script>
     <script src="scripts/trivia.js"></script>
     <script src="scripts/history.js"></script>
+    <script src="scripts/traffic.js"></script>
     <!-- <script src="scripts/horoscope.js"></script> -->
 </body>
 

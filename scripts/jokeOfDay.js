@@ -11,11 +11,12 @@ function jokeOfDay() {
     .then(function(response) {
       var results = response;
       // console.log(results)
+
       $("#card3Header").append("Joke of the Day!");
 
        // console.log(results.type)
           if(results.type === "single"){
-           // console.log(results.joke)
+          //  console.log(results.joke)
             $("#joke").append(results.joke);
             $("#jod_twopart").addClass("d-none")
           }
