@@ -2,11 +2,11 @@ $(document).ready(function() {
 
 function fillHeader(){
 // Pulling Modified Header Tags
-var currentDayEl = $("#current-day");
-var currentTimeEl = $("#current-time");
+let currentDayEl = $("#current-day");
+let currentTimeEl = $("#current-time");
 
 // Date
-var currentDay = moment().format('dddd MMMM Do');
+let currentDay = moment().format('dddd MMMM Do');
 currentDayEl.text(currentDay);
 
 // Time
