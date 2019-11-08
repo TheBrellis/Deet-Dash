@@ -27,3 +27,8 @@ body {
         width:auto;
         overflow: visible;
 }
+
+.jumbotron {
+        background-image: url("./images/tracks4.png");
+        background-size: cover; 
+}
