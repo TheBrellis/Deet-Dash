@@ -19,7 +19,6 @@ $(document).ready(function () {
             $("#recipePic").attr("src", response.recipes[0].image);
             $("#recipeLink").attr("href", response.recipes[0].sourceUrl);
 
-            // console.log(response);
 
         });
 

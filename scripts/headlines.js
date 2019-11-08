@@ -25,11 +25,6 @@ $(document).ready(function() {
             $("#story5").attr("href", response.results[4].url)
 
             
-
-
-
-
-            // console.log(response);
         })
         
         
