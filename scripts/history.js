@@ -11,10 +11,6 @@ $(document).ready(function() {
         })
           .then(function(response) {
             $("#history").append(response);
-      
-
-            // $("#triviaQuestion").append(question)
-            // $("#triviaAnswer").append(correctAnswer)
         
     });
 
