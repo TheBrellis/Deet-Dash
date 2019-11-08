@@ -21,7 +21,7 @@ $(document).ready(function () {
             if (status == google.maps.GeocoderStatus.OK) {
                 var lat = results[0].geometry.location.lat();
                 var lng = results[0].geometry.location.lng();
-                console.log("lat in" + lat)
+                
                 initMap(lat, lng)
             }
         });
@@ -33,18 +33,20 @@ $(document).ready(function () {
 
 
     $(".cityAuto").on("click", function () {
-        let city = $("#city-input").val();
         $("#map").removeClass("d-none");
+        let city = $("#city-input").val();
+        
         geoLocate();
         
        
     });
 
     // for traffic map
-    
+    var map
+
     function initMap(lat, lng){
 
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
             center: {
                 lat:lat,
@@ -52,7 +54,7 @@ $(document).ready(function () {
             }
             
         });
-        console.log(lat)
+        // console.log(lat)
 
         var trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);

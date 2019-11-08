@@ -12,5 +12,6 @@ body {
 
 #map {
         height: 400px;
-        width:100%;
+        width:auto;
+        overflow: visible;
 }
