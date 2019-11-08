@@ -18,8 +18,6 @@ $(document).ready(function() {
         $("#quotePic").attr("src", picURL);
         $("#hideURL").text(picURL)
         
-        // console.log(response);
-        
     });
 
     

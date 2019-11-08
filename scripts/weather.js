@@ -16,9 +16,6 @@ $(document).ready(function() {
             $("#humidity").text("Humidity: " + response.main.humidity + "%");
             $("#wind").text("Wind Speed: " + response.wind.speed + "MPH");
             $("#hiLo").text("Hi: " + response.main.temp_max + " / Lo: " + response.main.temp_min)
-    
-        // console.log(response);
-        // console.log(currentURL);
         });
         
     }
@@ -29,7 +26,5 @@ $(document).ready(function() {
         city = $("#newCity").val();
         dailyWeather();
         $("#newCity").val("")
-
-        // console.log(city)
     })
 })
