@@ -6,4 +6,10 @@ body {
         background-color: rgb(167, 218, 188);
         font-weight: bold;
         text-align: center;
+} 
+
+#map {
+        height: 400px;
+        width:auto;
+        overflow: visible;
 }
