@@ -52,7 +52,6 @@ function setUserInfo() {
 
 
 // Setting initial card values
-console.log(userInfo,"before manage card");
 manageCards();
 resetSelections();
 
