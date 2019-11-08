@@ -5,7 +5,7 @@ cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard"
 function checkStorage(){
 let userInfoJSON = localStorage.getItem('userInfo');
 
-userInfo = {
+let userInfo = {
     user: "me",
     cards: []
 };
