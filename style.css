@@ -3,11 +3,21 @@ body {
 } 
 
 .cardTop {
-        background-color: rgb(167, 218, 188);
+        background-color: #20639B;
+        font-family: 'Raleway', sans-serif;
+        color: white;
         font-weight: bold;
-        text-align: center;
+        font-size: 20px ;
+        text-align: left;
+        border-bottom: 1px;
+        border-bottom-color: white;
 }
 
 #title-header {
         font-family: 'Faster One', cursive;
+}
+
+#welcome {
+        text-shadow: -1 black;
+       /* background-image: url("./images/tireTracks.png ");*/ 
 }
