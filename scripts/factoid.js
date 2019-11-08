@@ -3,7 +3,7 @@ $(document).ready(function() {
     function factoid() {
 
        // var thisDate = moment().format('MM/DD')
-        var queryURL = `http://numbersapi.com/random/number`
+        var queryURL = `https://numbersapi.com/random/number`
         
         $.ajax({
           url: queryURL,
