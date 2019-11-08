@@ -49,7 +49,7 @@
 ### Interface Softwares
 - Jquery (JavaScript)
 - html (Framework)
-- Bulma (CSS)
+- FlexBox/Bootstrap (CSS)
 
 ### Rough Breakdown of Tasks
 
