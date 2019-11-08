@@ -5,9 +5,7 @@ $(document).ready(function () {
     function activatePlacesSearch() {
         var inputCity = document.getElementById("city-input")
         var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete(inputCity);
-        console.log(autocomplete)
-        
+        autocomplete = new google.maps.places.Autocomplete(inputCity);        
     }
 
 

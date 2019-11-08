@@ -1,28 +1,33 @@
-
-// Available Cards
-cardOptions = ["wordCard", "weatherCard","jokeCard","inspireCard","headlineCard","recipeCard","triviaCard","historyCard"]
-// Checking Local Storage for userInfo
-function checkStorage(){
-let userInfoJSON = localStorage.getItem('userInfo');
-
 let userInfo = {
     user: "me",
     cards: []
-};
+    };
 
-if (userInfoJSON){
-    userInfo = JSON.parse(userInfoJSON);
-} else {
-   cardOptions.forEach(card =>{
-        let thisInfo = {
-            name: `${card}`,
-            status: 'on'
+    function checkStorage() {
+        let userInfoJSON = localStorage.getItem('userInfo');
+
+        if (userInfoJSON) {
+            userInfo = JSON.parse(userInfoJSON);
+        } else {
+            cardOptions.forEach(card => {
+                let thisInfo = {
+                    name: `${card}`,
+                    status: 'on'
+                };
+                userInfo.cards.push(thisInfo);
+            });
         };
-        userInfo.cards.push(thisInfo);
-    });
-};
-};
+        console.log(userInfo, "end of checkStorage")
+    };
 
-$(document).ready(function() {
+
+$(document).ready(function () {
+    // Available Cards
+    cardOptions = ["wordCard", "weatherCard", "jokeCard", "inspireCard", "headlineCard", "recipeCard", "triviaCard", "historyCard", "trafficCard"]
+
+    // Checking Local Storage for userInfo
+    
+
 checkStorage();
+console.log(userInfo,"after checkStorage Runs")
 });
