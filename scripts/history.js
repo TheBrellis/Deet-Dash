@@ -3,7 +3,7 @@ $(document).ready(function() {
     function history() {
 
         var thisDate = moment().format('MM/DD')
-        var queryURL = `http://numbersapi.com/${thisDate}/date`
+        var queryURL = `https://numbersapi.com/${thisDate}/date`
         
         $.ajax({
           url: queryURL,

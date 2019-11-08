@@ -17,7 +17,7 @@ let userInfo = {
                 userInfo.cards.push(thisInfo);
             });
         };
-        console.log(userInfo, "end of checkStorage")
+        
     };
 
 
@@ -29,5 +29,5 @@ $(document).ready(function () {
     
 
 checkStorage();
-console.log(userInfo,"after checkStorage Runs")
+
 });
