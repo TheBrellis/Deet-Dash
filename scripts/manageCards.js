@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
  
-
 // setting initial value of cards depending on whats currently in localStorage
 
 
@@ -10,7 +9,7 @@ let cards = document.querySelectorAll("button[data-action= 'toggle-card']");
 
 //Updates display state of cards depending on values in userInfo object
 function manageCards(){
-    for (i=0; i<cardOptions.length;i++){
+    for (i=0; i < cardOptions.length;i++){
         let objectState = userInfo.cards[i].status;
 
         if (objectState === "off"){
@@ -53,8 +52,10 @@ function setUserInfo() {
 
 
 // Setting initial card values
+console.log(userInfo,"before manage card");
 manageCards();
 resetSelections();
+
 //Click Events for Card elements in Modal
 // click event for the selections toggles the setting of the selection
 $(cards).on("click",function(event){
@@ -78,4 +79,7 @@ $("#submit-cards").on("click",setUserInfo);
 // when modal appears, clicking anywhere except for the save button runs manageCards()
 $("#clear").on("click", resetSelections);
 
+$('#exampleModal').on('hidden.bs.modal', resetSelections);
+
 });
+

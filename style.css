@@ -21,3 +21,9 @@ body {
         text-shadow: -1 black;
        /* background-image: url("./images/tireTracks.png ");*/ 
 }
+
+#map {
+        height: 400px;
+        width:auto;
+        overflow: visible;
+}
