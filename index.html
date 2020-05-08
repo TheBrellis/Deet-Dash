@@ -16,7 +16,7 @@
 <body>
 
     <header class="jumbotron jumbotron-fluid bg-dark text-center py-3">
-        <h1 id ="welcome" class="display-4 text-light">Welcome to <span id="title-header">Deet Dash</span>!</h1>
+        <h1 id="welcome" class="display-4 text-light">Welcome to <span id="title-header">Deet Dash</span>!</h1>
         <p class="display-5 text-light ">Today is: <span id="current-day"></span></p>
         <p id="current-time" class="display-4 text-light"></p>
         <!--Manage Your Page Button-->
@@ -36,29 +36,38 @@
                     </div>
                     <div class="modal-body text-align-left">
                         <div id="manage-buttons" class="btn-group-vertical">
-                            <button data-card="word" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="word" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Word of the Day</button>
-                            <button data-card="weather" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="weather" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Weather</button>
-                            <button data-card="joke" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="joke" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Joke of the Day</button>
-                            <button data-card="inspire" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="inspire" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Inspiration of the Day</button>
-                            <button data-card="headline" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="headline" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Top 5 Headlines</button>
-                            <button data-card="recipe" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="recipe" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Recipe of the Day</button>
-                            <button data-card="trivia" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="trivia" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 Trivia of the Day</button>
-                            <button data-card="history" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
+                            <button data-card="history" data-status="on" data-action="toggle-card" type="button"
+                                class="btn btn-secondary text-align-left">
                                 This Day in History</button>
                             <!-- <button data-card="traffic" data-status="on" data-action="toggle-card" type="button" class="btn btn-secondary text-align-left">
                                     Traffic</button> -->
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id= "clear" type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                        <button id = "submit-cards" type="button" class="btn btn-primary">Save Changes</button>
+                        <button id="clear" type="button" class="btn btn-outline-secondary"
+                            data-dismiss="modal">Close</button>
+                        <button id="submit-cards" type="button" class="btn btn-primary">Save Changes</button>
                     </div>
                 </div>
             </div>
@@ -136,7 +145,8 @@
                     <div class="row d-flex justify-content-center">
                         <button type="button" id="copyURL" class="btn btn-secondary mr-2 mt-3">Copy URL</button>
                         <div id="hideURL" class="d-none"></div>
-                        <button type="button" id="nextQ" class="btn btn-outline-secondary ml-2 mt-3">Next Quote></button>
+                        <button type="button" id="nextQ" class="btn btn-outline-secondary ml-2 mt-3">Next
+                            Quote></button>
                     </div>
 
                 </div>
@@ -157,7 +167,8 @@
                     <div><a id="story5" href="" target="_blank"></a></div>
                     <hr>
                     <a class="d-flex justify-content-center" href="https://developer.nytimes.com" target="_blank">
-                        <img class="rounded" src="https://developer.nytimes.com/files/poweredby_nytimes_200a.png?v=1539041465000"
+                        <img class="rounded"
+                            src="https://developer.nytimes.com/files/poweredby_nytimes_200a.png?v=1539041465000"
                             alt="New York Times Logo">
                     </a>
                 </div>
@@ -208,46 +219,6 @@
                 </div>
             </div> <!-- end of card 8 date in history  -->
 
-            <!-- card 9 your daily horoscope 
-                <div id="horoscopeCard" class="card border-dark">
-                <div class="card-header cardTop">Daily Horoscope!</div>
-                <div class="card-body"> 
-                </div>
-            </div>
-        </div>  end of card 8 recipe of the day -->
-
-            <!-- card 10 traffic -->
-            <!-- <div id="trafficCard" class="card border-dark">
-                <div class="card-header cardTop">Traffic</div>
-                <div class="card-body">
-                    <div>
-                    </div>
-                    </div>
-                        <div id="map" class="d-none mb-2"></div>
-                        <div class="dropdown d-flex justify-content-left mb-2 ml-2">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Enter New City
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <div class="input-group">
-                                    <input type="text" id="city-input" class="form-control controls"
-                                        placeholder="Start typing here" aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button id="cityMapSearch" class="btn btn-outline-secondary cityAuto"
-                                            type="button">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> end of card 10 traffic -->
-          
-
-
         </div><!-- end of card-columns section -->
 
     </div> <!-- end of container -->
@@ -264,9 +235,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- Google Maps API -->
-    
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=#&libraries=places"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=#&libraries=places"></script>
 
     <!--Page Specific Scripts-->
     <script src="scripts/storage.js"></script>
@@ -281,7 +251,6 @@
     <script src="scripts/trivia.js"></script>
     <script src="scripts/history.js"></script>
     <script src="scripts/traffic.js"></script>
-    <!-- <script src="scripts/horoscope.js"></script> -->
 </body>
 
 </html>
